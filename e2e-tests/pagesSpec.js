@@ -21,7 +21,11 @@ describe("Test Pages", function() {
     return element(by.css('input[type=submit]')).click();
   }
 
+<<<<<<< HEAD
   xit('should have no listings on the index page and show a special message', function() {
+=======
+  it('should have no listings on the index page and show a special message', function() {
+>>>>>>> new tests
     browser.get(ROOT + "/");
     expect(element.all(by.css('.url-listing')).count()).toBe(0);
 
@@ -29,7 +33,11 @@ describe("Test Pages", function() {
     expect(element(by.css('.empty-url-listing')).getText()).toMatch(/no URL listings/);
   });
 
+<<<<<<< HEAD
   xit('should create a new URL listing', function() {
+=======
+  it('should create a new URL listing', function() {
+>>>>>>> new tests
     var customTitle = 'title-' + Math.random();
     var customUrl = 'http://my-new-website.com/' + Math.random();
 
@@ -46,7 +54,11 @@ describe("Test Pages", function() {
     });
   });
 
+<<<<<<< HEAD
   xit('should remove the listing when delete is clicked', function(){
+=======
+  it('should remove the listing when delete is clicked', function(){
+>>>>>>> new tests
       createUrlEntry("url one", "http://url-one.com");
       
       browser.get(ROOT + "/");
@@ -68,11 +80,19 @@ describe("Test Pages", function() {
       element(by.css('.btn-primary')).click();
       expect(element(by.model('formCtrl.form.title')).getAttribute('value')).toContain('url one');
       expect(element(by.model('formCtrl.form.url')).getAttribute('ng-disabled')).toContain('formCtrl.edit');
+<<<<<<< HEAD
       
     });
 
 
   xit('should search based off of the URL', function() {
+=======
+
+    });
+
+
+  it('should search based off of the URL', function() {
+>>>>>>> new tests
     createUrlEntry("url one", "http://url-one.com");
     createUrlEntry("url two", "http://url-two.com");
     createUrlEntry("url three", "http://url-three.com");
